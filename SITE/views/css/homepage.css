@@ -1,0 +1,51 @@
+.navbar-btn {
+  width: 190px;
+  height: 70px;
+  background-color: #018E3E;
+  color: white;
+  font-size: 35px;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: transform .2s;
+}
+.navbar-btn:hover{
+  transform: scale(1.01);
+}
+#ft {
+  width: 99%;
+}
+.carousel-control-next,
+.carousel-control-prev{
+    filter: invert(100%);
+}
+#cards{
+  max-width: auto;
+  max-height: 240px;
+  transition: transform .2s;
+}
+#cards:hover{
+  transform: scale(1.01);
+}
+.modal-content{
+  text-align: center;
+}
+#icon{
+  height: 150px;
+  margin-bottom: 20px;
+}
+footer {
+  position: fixed; 
+  bottom: 0px; 
+  width: 100%; 
+  height: 60px; 
+  background-color: #1c2541;
+}
+.redes{
+  float: right;
+}
+.redes img{
+  width: auto;
+  height: 40px;
+  padding: 5px 5px;
+}
