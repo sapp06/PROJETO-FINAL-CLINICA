@@ -18,6 +18,7 @@ class controllerPacientes {
         $nasc = $_POST['nasc'];
         $rg = $_POST['rg'];
         $sexo = $_POST['sexo'];
+        $senha = $_POST['senha'];
 
         // Cria um novo paciente
         $paciente = new Paciente();
@@ -28,6 +29,7 @@ class controllerPacientes {
         $paciente->cpf = $cpf;
         $paciente->rg = $rg;
         $paciente->sexo = $sexo;
+        $paciente->senha = $senha;
 
         // Salva no banco de dados
         if ($paciente->save()) {

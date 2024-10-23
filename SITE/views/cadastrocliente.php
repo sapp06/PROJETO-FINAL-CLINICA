@@ -17,15 +17,19 @@
     <div class="container">
         <div class="cadastro">
             <h1 class="fw-bold">Cadastro</h1>
+<<<<<<< Updated upstream
             <form action="" method="POST">
                 <input type="text" name="nome" placeholder="Nome completo">
+=======
+            <form action="" method="post">
+                <input type="text" name="nomeCompleto" placeholder="Nome completo">
+>>>>>>> Stashed changes
                 <input type="email" name="email" placeholder="E-mail">
                 <input type="password" name="senha" placeholder="Senha">
                 <div class="row">
                     <div class="col-6">
                         <input type="number" name="cpf" placeholder="CPF">
                         <input type="number" name="rg" placeholder="RG">
-                        
                     </div>
                     <div class="col-6">
                         <input placeholder="Data de nascimento" onfocus="(this.type='date')" onblur="(this.type='date')">
