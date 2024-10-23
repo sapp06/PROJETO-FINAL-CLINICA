@@ -19,32 +19,18 @@
             <h1 class="fw-bold">Cadastro</h1>
             <form action="" method="post">
                 <input type="text" name="nome" placeholder="Nome completo">
-                <input type="number" name="carteirinha" placeholder="Nº da carteirinha">
                 <input type="email" name="email" placeholder="E-mail">
-                <input type="number" name="crm" placeholder="CRM">
+                <input type="password" name="senha" placeholder="Senha">
+                
                 <div class="row">
                     <div class="col-6">
                         <input type="number" name="cpf" placeholder="CPF">
                         <input type="number" name="rg" placeholder="RG">
-                        <select name="etnia">
-                            <option value="" disabled selected hidden>Etnia</option>
-                            <option value="branco">Branco</option>
-                            <option value="preto">Preto</option>
-                            <option value="pardo">Pardo</option>
-                            <option value="amarelo">Amarelo</option>
-                            <option value="indigena">Indígena</option>
-                        </select>
                     </div>
                     <div class="col-6">
                         <input placeholder="Data de nascimento" onfocus="(this.type='date')" onblur="(this.type='date')">
-                        <input placeholder="Data de emissão" onfocus="(this.type='date')" onblur="(this.type='date')">
-                        <select name="genero">
-                            <option value="" disabled selected hidden>Identidade de gênero</option>
-                            <option value="homem">Homem</option>
-                            <option value="mulher">Mulher</option>
-                            <option value="nb">Pessoa não-binária</option>
-                            <option value="none">Prefiro não dizer</option>
-                        </select>
+                        <input type="number" name="crm" placeholder="CRM">
+
                     </div>
             </form>
             </div>

@@ -11,7 +11,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-
 <body style="overflow-x: hidden; font-family:'Battambang', sans-serif;">
     <nav class="navbar navbar-expand-sm text-lg">
         <div class="container-fluid">
@@ -38,7 +37,37 @@
     <div class="row" style="height: 8px; background-color: #018E3E;"></div>
     <div class="row" style="height: 2px;"></div>
     <div class="row" style="height: 8px; background-color: #4B88A2; box-shadow: 0px 5px 3px rgb(144, 144, 144);"></div>
+   
+    <h1>Usuários Cadastrados</h1>
 
+    <?php if (empty($books)): ?>
+        <p>Nenhum usuário cadastrado.</p>
+    <?php else: ?>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Data de nascimento</th>
+                    <th>CPF</th>
+                    <th>RG</th>
+                    <th>Sexo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($pacientes as $paciente): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($paciente['nomeCompleto']); ?></td>
+                        <td><?php echo htmlspecialchars($paciente['email']); ?></td>
+                        <td><?php echo htmlspecialchars($paciente['nasc']); ?></td>
+                        <td><?php echo htmlspecialchars($paciente['cpf']); ?></td>
+                        <td><?php echo htmlspecialchars($paciente['rg']); ?></td>
+                        <td><?php echo htmlspecialchars($paciente['sexo']); ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    <?php endif; ?>
 </body>
 <footer>
     <div class="redes">
