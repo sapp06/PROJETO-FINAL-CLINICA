@@ -69,7 +69,7 @@
                                     onclick="showForgotPassword('cliente')">Esqueci a Senha</button></div>
                             <button type="submit" class="btn btn-primary">Login</button>
 
-                            <a href="cadastrocliente.html"><button type="button"
+                            <a href="cadastrocliente.php"><button type="button"
                                     class="btn btn-link text-success">Cadastro</button></a>
                         </form>
                     </div>
@@ -100,7 +100,7 @@
                                     onclick="showForgotPassword('colaborador')">Esqueci a Senha</button></div>
                             <div>
                                 <button type="submit" class="btn btn-primary">Login</button>
-                                <a href="cadastrocol.html"><button type="button"
+                                <a href="cadastrocol.php"><button type="button"
                                         class="btn btn-link text-primary">Cadastro</button></a>
                             </div>
                         </form>
@@ -190,13 +190,13 @@
 </body>
 <footer>
     <div class="redes">
-        <a href="https://www.facebook.com/JYPETWICE/?locale=pt_BR" target="_blank" rel="external"><img
+        <a href="javascript:void(0)" target="_blank" rel="external"><img
                 src="media/fb.png" alt=""></a>
-        <a href="https://www.instagram.com/twicetagram/" target="_blank" rel="external"><img src="media/insta.png"
+        <a href="javascript:void(0)" target="_blank" rel="external"><img src="media/insta.png"
                 alt=""></a>
-        <a href="https://www.linkedin.com/company/twice-ensino-bilingue/?originalSubdomain=br" target="_blank"
+        <a href="javascript:void(0)" target="_blank"
             rel="external"><img src="media/linked.png" alt=""></a>
-        <a href="https://web.whatsapp.com/%F0%9F%8C%90/pt-br" target="_blank" rel="external"><img src="media/zap.png"
+        <a href="javascript:void(0)" target="_blank" rel="external"><img src="media/zap.png"
                 alt=""></a>
     </div>
 </footer>
