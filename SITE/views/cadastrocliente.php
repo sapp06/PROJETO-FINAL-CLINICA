@@ -25,14 +25,6 @@
                     <div class="col-6">
                         <input type="number" name="cpf" placeholder="CPF">
                         <input type="number" name="rg" placeholder="RG">
-                        <select name="etnia">
-                            <option value="" disabled selected hidden>Etnia</option>
-                            <option value="branco">Branco</option>
-                            <option value="preto">Preto</option>
-                            <option value="pardo">Pardo</option>
-                            <option value="amarelo">Amarelo</option>
-                            <option value="indigena">Indígena</option>
-                        </select>
                         <select name="sexo">
                             <option value="" disabled selected hidden>Sexo</option>
                             <option value="masc">Masculino</option>
