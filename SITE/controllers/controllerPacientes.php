@@ -11,26 +11,28 @@ class controllerPacientes {
 
     public function salvarCadastroP() {
         // Recebe dados do formulário
-        $nomeCompleto = $_POST['nomeCompleto'];
-        $nasc = $_POST['nasc'];
-        $cpf = $_POST['cpf'];
+        $nome = $_POST['nome'];
         $email = $_POST['email'];
-        $telefone = $_POST['telefone'];
+        $senha = $_POST['senha'];
+        $cpf = $_POST['cpf'];
+        $nasc = $_POST['nasc'];
+        $rg = $_POST['rg'];
         $sexo = $_POST['sexo'];
 
         // Cria um novo paciente
         $paciente = new Paciente();
-        $paciente->nomeCompleto = $nomeCompleto;
+        $paciente->nome = $nome;
+        $paciente->email = $email;
+        $paciente->senha = $senha;
         $paciente->nasc = $nasc;
         $paciente->cpf = $cpf;
-        $paciente->email = $email;
-        $paciente->telefone = $telefone;
+        $paciente->rg = $rg;
         $paciente->sexo = $sexo;
 
         // Salva no banco de dados
         if ($paciente->save()) {
             // Redireciona para a página de listagem ------ deveria redirecionar para a página de usuario e senha
-            header('Location: /LIVRARIA/homepage.php');
+            header('Location: /SITE/views/homepage.php');
         } else {
             echo "Erro ao salvar seu cadastro!";
         }

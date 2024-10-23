@@ -6,11 +6,12 @@ class Paciente {
     private $conn;
     private $table_name = "pacientes";
 
-    public $nomeCompleto;
+    public $nome;
+    public $email;
+    public $senha;
     public $nasc;
     public $cpf;
-    public $email;
-    public $telefone;
+    public $rg;
     public $sexo;
 
     public function __construct() {
@@ -19,14 +20,15 @@ class Paciente {
     }
 
     public function save() {
-        $query = "INSERT INTO " . $this->table_name . " (nomeCompleto, nasc, cpf, email, telefone, sexo) VALUES (:nomeCompleto, :nasc, :cpf, :email, :telefone, :sexo)";
+        $query = "INSERT INTO " . $this->table_name . " (nome, email, senha, nasc, cpf, rg, sexo) VALUES (:nome, :email, :senha, :nasc, :cpf, :rg, :sexo)";
         $stmt = $this->conn->prepare($query);
 
-        $stmt->bindParam(':nomeCompleto', $this->nomeCompleto);
+        $stmt->bindParam(':nome', $this->nome);
+        $stmt->bindParam(':email', $this->email);
+        $stmt->bindParam(':senha', $this->senha);
         $stmt->bindParam(':nasc', $this->nasc);
         $stmt->bindParam(':cpf', $this->cpf);
-        $stmt->bindParam(':email', $this->email);
-        $stmt->bindParam(':telefone', $this->telefone);
+        $stmt->bindParam(':rg', $this->rg);
         $stmt->bindParam(':sexo', $this->sexo);
 
         if ($stmt->execute()) {

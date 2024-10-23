@@ -17,7 +17,7 @@
     <div class="container">
         <div class="cadastro">
             <h1 class="fw-bold">Cadastro</h1>
-            <form action="" method="post">
+            <form action="" method="POST">
                 <input type="text" name="nome" placeholder="Nome completo">
                 <input type="email" name="email" placeholder="E-mail">
                 <input type="password" name="senha" placeholder="Senha">
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div id="concluir">
-                <a href="homepage.php">
+                <a href="homepagecol.php">
                     <p>Concluir</p>
                 </a>
             </div>
