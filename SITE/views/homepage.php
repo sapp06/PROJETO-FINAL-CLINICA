@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SP Medical Group - Pagina inicial</title>
-    <link rel="shortcut icon" href="media/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="shortcut icon" href="../views/media/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../views/css/homepage.css">
     <link href="https://fonts.googleapis.com/css?family=Battambang:100,300,regular,700,900" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-sm text-lg">
         <div class="container-fluid">
             <a class="navbar-brand" style="margin-left: 10px;" href="javascript:void(0)">
-                <img src="media/SP logo.png" alt="logo" style="height: 90px;">
+                <img src="../views/media/SP logo.png" alt="logo" style="height: 90px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -57,7 +57,7 @@
                     <!-- Formulário de Login do Cliente -->
                     <div id="clientLoginForm" style="display: none;">
                         <form>
-                            <img src="media/icone cliente.png" id="icon">
+                            <img src="../views/media/icone cliente.png" id="icon">
                             <div class="mb-3">
                                 <input type="text" class="form-control" placeholder="CPF" id="cpf">
                             </div>
@@ -69,7 +69,7 @@
                                     onclick="showForgotPassword('cliente')">Esqueci a Senha</button></div>
                             <button type="submit" class="btn btn-primary">Login</button>
 
-                            <a href="cadastrocliente.php"><button type="button"
+                            <a href="/PROJETO-FINAL-CLINICA/SITE/public/cadastro"><button type="button"
                                     class="btn btn-link text-success">Cadastro</button></a>
                         </form>
                     </div>
@@ -77,7 +77,7 @@
                     <!-- Formulário de Login do Colaborador -->
                     <div id="collaboratorLoginForm" style="display: none;">
                         <form>
-                            <img src="media/icone colaborador.png" alt="" id="icon">
+                            <img src="../views/media/icone colaborador.png" alt="" id="icon">
                             <div class="mb-3">
                                 <input type="text" class="form-control" placeholder="CRM" id="crm">
                             </div>
@@ -98,12 +98,11 @@
                             </div>
                             <div style="margin-bottom: 30px;"><button type="button" class="btn btn-link text-primary"
                                     onclick="showForgotPassword('colaborador')">Esqueci a Senha</button></div>
-                            <div>
-                                <button type="submit" class="btn btn-primary">Login</button>
-                                <a href="cadastrocol.php"><button type="button"
-                                        class="btn btn-link text-primary">Cadastro</button></a>
-                            </div>
+                            
                         </form>
+                        <div>
+                                <a href="/PROJETO-FINAL-CLINICA/SITE/public/administrador"><button class="btn btn-primary" >Login</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -126,13 +125,13 @@
                 <!-- O slideshow/carousel -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="media/1.png" alt="1" class="d-block w-10 mx-auto rounded" id="ft">
+                        <img src="../views/media/1.png" alt="1" class="d-block w-10 mx-auto rounded" id="ft">
                     </div>
                     <div class="carousel-item">
-                        <img src="media/2.png" alt="2" class="d-block w-10 mx-auto rounded" id="ft">
+                        <img src="../views/media/2.png" alt="2" class="d-block w-10 mx-auto rounded" id="ft">
                     </div>
                     <div class="carousel-item">
-                        <img src="media/3.png" alt="3" class="d-block w-10 mx-auto rounded" id="ft">
+                        <img src="../views/media/3.png" alt="3" class="d-block w-10 mx-auto rounded" id="ft">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
@@ -144,8 +143,8 @@
             </div>
         </div>
         <div class="col-sm-12 col-md-5">
-            <a href=""><img src="media/encontrar.png" class="img-fluid" id="cards" alt=""></a>
-            <a href=""><img src="media/sangue.png" id="cards" class="img-fluid"
+            <a href=""><img src="../views/media/encontrar.png" class="img-fluid" id="cards" alt=""></a>
+            <a href=""><img src="../views/media/sangue.png" id="cards" class="img-fluid"
                     style="margin-top: 20px; margin-bottom: 60px;" alt=""></a>
         </div>
     </div>
@@ -191,12 +190,12 @@
 <footer>
     <div class="redes">
         <a href="javascript:void(0)" target="_blank" rel="external"><img
-                src="media/fb.png" alt=""></a>
-        <a href="javascript:void(0)" target="_blank" rel="external"><img src="media/insta.png"
+                src="../views/media/fb.png" alt=""></a>
+        <a href="javascript:void(0)" target="_blank" rel="external"><img src="../views/media/insta.png"
                 alt=""></a>
         <a href="javascript:void(0)" target="_blank"
-            rel="external"><img src="media/linked.png" alt=""></a>
-        <a href="javascript:void(0)" target="_blank" rel="external"><img src="media/zap.png"
+            rel="external"><img src="../views/media/linked.png" alt=""></a>
+        <a href="javascript:void(0)" target="_blank" rel="external"><img src="../views/media/zap.png"
                 alt=""></a>
     </div>
 </footer>
