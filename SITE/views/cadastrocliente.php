@@ -6,18 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SP Medical Group - Cadastro</title>
-    <link rel="shortcut icon" href="media/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../views/media/icon.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Battambang:100,300,regular,700,900" rel="stylesheet" />
     <!-- Add Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/cadastrocliente.css">
+    <link rel="stylesheet" href="../views/css/cadastrocliente.css">
 </head>
 
 <body>
     <div class="container">
         <div class="cadastro">
             <h1 class="fw-bold">Cadastro</h1>
-            <form action="" method="post">
+            <form action="/PROJETO-FINAL-CLINICA/SITE/public/salvarCadastroP" method="POST">
                 <input type="text" name="nome" placeholder="Nome completo">
                 <input type="email" name="email" placeholder="E-mail">
                 <input type="password" name="senha" placeholder="Senha">
@@ -28,20 +28,18 @@
                         
                     </div>
                     <div class="col-6">
-                        <input placeholder="Data de nascimento" onfocus="(this.type='date')" onblur="(this.type='date')">
+                        <input placeholder="Data de nascimento" name="nasc" onfocus="(this.type='date')" onblur="(this.type='date')">
                         <select name="sexo">
                             <option value="" disabled selected hidden>Sexo</option>
                             <option value="masc">Masculino</option>
                             <option value="fem">Feminino</option>
                         </select>
+                        </div>
+                <button type="submit" id="concluir">Concluir</button>
             </form>
                 </div>
             </div>
-            <div id="concluir">
-                <a href="homepage.php">
-                    <p>Concluir</p>
-                </a>
-            </div>
+            
         </div>
     </div>
 
