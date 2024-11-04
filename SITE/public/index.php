@@ -35,6 +35,22 @@ switch ($request) {
     case '/PROJETO-FINAL-CLINICA/SITE/public/administrador':
         $controller->loginfalso();
         break;
+    case '/PROJETO-FINAL-CLINICA/SITE/public/deleteCadastro':
+        if ($method == 'POST') {
+            $controller->deletePacienteId();
+        }
+        break;
+
+    case (preg_match('/\/PROJETO-FINAL-CLINICA\/SITE\/public\/updateCadastro\/(\d+)/', $request, $matches) ? true : false):
+        $id = $matches[1];
+        $controller->showUpdateForm($id);
+        break;
+
+    case '/PROJETO-FINAL-CLINICA/SITE/public/updateCadastro':
+        if ($method == 'POST') {
+            $controller->updatePaciente();
+        }
+        break;
     default:
         http_response_code(404);
         echo "Página não encontrada.";

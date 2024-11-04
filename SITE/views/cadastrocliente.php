@@ -17,11 +17,7 @@
     <div class="container">
         <div class="cadastro">
             <h1 class="fw-bold">Cadastro</h1>
-<<<<<<< Updated upstream
             <form action="" method="post">
-=======
-            <form action="/PROJETO-FINAL-CLINICA/SITE/public/salvarCadastroP" method="POST">
->>>>>>> Stashed changes
                 <input type="text" name="nome" placeholder="Nome completo">
                 <input type="email" name="email" placeholder="E-mail">
                 <input type="password" name="senha" placeholder="Senha">
@@ -43,15 +39,11 @@
             </form>
                 </div>
             </div>
-<<<<<<< Updated upstream
             <div id="concluir">
                 <a href="homepage.php">
                     <p>Concluir</p>
                 </a>
             </div>
-=======
-            
->>>>>>> Stashed changes
         </div>
     </div>
 

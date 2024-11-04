@@ -52,5 +52,45 @@ class controllerPacientes {
         // Exibe a lista de livros
         require_once '../views/consultarcadastro.php';
     }
+    public function showUpdateForm($id) {
+        $paciente = new Paciente();
+        $pacienteInfo = $paciente->getById($id);
+        include '../views/attcadastro.php'; // Inclua o arquivo do formulário de atualização
+    }
+
+    // Método para atualizar um livro
+    public function updatePaciente() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $paciente = new Paciente();
+            $paciente->id = $_POST['id'];
+            $paciente->nome = $_POST['nome'];
+            $paciente->email = $_POST['email'];
+            $paciente->senha = $_POST['senha'];
+            $paciente->cpf = $_POST['cpf'];
+            $paciente->nasc = $_POST['nasc'];
+            $paciente->rg = $_POST['rg'];
+            $paciente->sexo = $_POST['sexo'];
+
+            if ($paciente->update()) {
+                header('Location: /PROJETO-FINAL-CLINICA/SITE/public/consultarCadastros');
+            } else {
+                echo "Erro ao atualizar o cadastro.";
+            }
+        }
+    }
+
+    // Método para excluir um livro pelo título
+    public function deletePacienteId() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $paciente = new Paciente();
+            $paciente->id = $_POST['id'];
+
+            if ($paciente->deleteId()) {
+                header('Location: /PROJETO-FINAL-CLINICA/SITE/public/consultarCadastros');
+            } else {
+                echo "Erro ao excluir o cadastro.";
+            }
+        }
+    }
 }
 

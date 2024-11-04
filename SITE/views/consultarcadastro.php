@@ -4,13 +4,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SP Medical Group - Pagina inicial</title>
+    <title>SP Medical Group - Consultar Cadastro</title>
     <link rel="shortcut icon" href="../views/media/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="../views/css/consultarcadastro.css">
     <link href="https://fonts.googleapis.com/css?family=Battambang:100,300,regular,700,900" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        .btn-atualizar {
+            background-color: #018E3E;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .btn-atualizar:hover {
+            background-color: #016b2f;
+        }
+
+        .btn-excluir {
+            background-color: #B6244F;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .btn-excluir:hover {
+            background-color: #a11f45;
+        }
+    </style>
 </head>
+
 <body style="overflow-x: hidden; font-family:'Battambang', sans-serif;">
     <nav class="navbar navbar-expand-sm text-lg">
         <div class="container-fluid">
@@ -30,14 +59,12 @@
                     </li>
                 </ul>
             </div>
-            
         </div>
     </nav>
 
     <div class="row" style="height: 8px; background-color: #018E3E;"></div>
     <div class="row" style="height: 2px;"></div>
     <div class="row" style="height: 8px; background-color: #4B88A2; box-shadow: 0px 5px 3px rgb(144, 144, 144);"></div>
-   
     <div class="container" style="margin-top: 20px;">
         <?php if (empty($pacientes)): ?>
             <p>Nenhum usuário cadastrado.</p>
@@ -51,6 +78,7 @@
                         <th>CPF</th>
                         <th>RG</th>
                         <th>Sexo</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -62,6 +90,13 @@
                             <td><?php echo htmlspecialchars($paciente['cpf']); ?></td>
                             <td><?php echo htmlspecialchars($paciente['rg']); ?></td>
                             <td><?php echo htmlspecialchars($paciente['sexo']); ?></td>
+                            <td>
+                                <a href="/PROJETO-FINAL-CLINICA/SITE/public/updateCadastro/<?php echo $paciente['id']; ?>" class="btn btn-atualizar">Atualizar</a>
+                                <form action="/PROJETO-FINAL-CLINICA/SITE/public/deleteCadastro" method="POST" style="display:inline;">
+                                    <input type="hidden" name="id" value="<?php echo $paciente['id']; ?>">
+                                    <button type="submit" class="btn btn-excluir">Excluir</button>
+                                </form>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>
@@ -71,14 +106,10 @@
 </body>
 <footer>
     <div class="redes">
-        <a href="javascript:void(0)" target="_blank" rel="external"><img
-                src="../views/media/fb.png" alt=""></a>
-        <a href="javascript:void(0)" target="_blank" rel="external"><img src="../views/media/insta.png"
-                alt=""></a>
-        <a href="javascript:void(0)" target="_blank"
-            rel="external"><img src="../views/media/linked.png" alt=""></a>
-        <a href="javascript:void(0)" target="_blank" rel="external"><img src="../views/media/zap.png"
-                alt=""></a>
+        <a href="javascript:void(0)" target="_blank" rel="external"><img src="../views/media/fb.png" alt=""></a>
+        <a href="javascript:void(0)" target="_blank" rel="external"><img src="../views/media/insta.png" alt=""></a>
+        <a href="javascript:void(0)" target="_blank" rel="external"><img src="../views/media/linked.png" alt=""></a>
+        <a href="javascript:void(0)" target="_blank" rel="external"><img src="../views/media/zap.png" alt=""></a>
     </div>
 </footer>
 
