@@ -44,18 +44,18 @@ class controllerAdm {
     }
     
 
-    public function consultarCadastros() {
+    public function consultarCadastrosA() {
         // Pega todos os adms no banco de dados
         $adm = new Adm();
         $adms = $adm->getAll();
 
         // Exibe a lista de cadastros
-        require_once '../views/consultarcadastro.php';
+        require_once '../views/consultarcadastroAdm.php';
     }
     public function showUpdateForm($id) {
         $adm = new Adm();
         $admInfo = $adm->getById($id);
-        include '../views/attcadastro.php'; // Inclua o arquivo do formulário de atualização
+        include '../views/attcadastroAdm.php'; // Inclua o arquivo do formulário de atualização
     }
 
     // Método para atualizar um adm
