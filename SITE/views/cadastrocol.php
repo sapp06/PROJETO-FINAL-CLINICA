@@ -29,8 +29,6 @@
                     </div>
                     <div class="col-6">
                         <input placeholder="Data de nascimento" onfocus="(this.type='date')" onblur="(this.type='date')">
-                        <input type="number" name="crm" placeholder="CRM">
-
                     </div>
             </form>
             </div>
