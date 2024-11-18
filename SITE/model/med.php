@@ -2,7 +2,7 @@
 
 require_once '../config/database.php';
 
-class Adm {
+class Med {
     private $conn;
     private $table_name = "meds";
 

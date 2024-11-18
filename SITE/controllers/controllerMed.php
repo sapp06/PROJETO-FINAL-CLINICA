@@ -2,7 +2,7 @@
 
 require_once '../model/med.php';
 
-class controllerAdm {
+class controllerMed {
 
     public function cadastrarMed() {
         // Exibe o formulário de cadastro de meds
