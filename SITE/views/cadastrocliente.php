@@ -37,11 +37,14 @@
             </form>
                 </div>
             </div>
+<<<<<<< Updated upstream
             <div id="concluir">
                 <a href="homepagecol.php">
                     <p>Concluir</p>
                 </a>
             </div>
+=======
+>>>>>>> Stashed changes
         </div>
     </div>
 

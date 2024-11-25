@@ -104,6 +104,14 @@
                                         class="btn btn-link text-primary">Cadastro</button></a>
                             </div>
                         </form>
+<<<<<<< Updated upstream
+=======
+                        <div>
+                                <a href="/PROJETO-FINAL-CLINICA/SITE/public/administrador"><button class="btn btn-primary" >Login</button></a>
+                                <a href="/PROJETO-FINAL-CLINICA/SITE/public/cadastroadm"><button type="button"
+                                        class="btn btn-link text-primary">Cadastro</button></a>
+                        </div>
+>>>>>>> Stashed changes
                     </div>
                 </div>
             </div>
