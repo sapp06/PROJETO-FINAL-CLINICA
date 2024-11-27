@@ -6,12 +6,15 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require_once '../controllers/controllerPacientes.php';
+require_once '../controllers/controllerAdm.php';
+
 
 // Lógica de roteamento
 $request = $_SERVER['REQUEST_URI'];
 $method = $_SERVER['REQUEST_METHOD']; // Para diferenciar GET e POST
 
 $controller = new controllerPacientes();
+$controller2 = new controllerAdm();
 
 switch ($request) {
     case '/PROJETO-FINAL-CLINICA/SITE/public/':
@@ -51,110 +54,43 @@ switch ($request) {
             $controller->updatePaciente();
         }
         break;
-    default:
-        http_response_code(404);
-        echo "Página não encontrada.";
-        break;
-}
-
-require_once '../controllers/controllerAdm.php';
-
-// Lógica de roteamento
-$request = $_SERVER['REQUEST_URI'];
-$method = $_SERVER['REQUEST_METHOD']; // Para diferenciar GET e POST
-
-$controller = new controllerAdm();
-
-switch ($request) {
     case '/PROJETO-FINAL-CLINICA/SITE/public/':
-        $controller->inicio();
+        $controller2->inicio();
         break;
 
     case '/PROJETO-FINAL-CLINICA/SITE/public/salvarCadastroA':
         if ($method == 'POST') {
-            $controller->salvarCadastroA();
+            $controller2->salvarCadastroA();
         } else {
             http_response_code(405); // Método não permitido
             echo "Método não permitido.";
         }
         break;
     case '/PROJETO-FINAL-CLINICA/SITE/public/consultarCadastrosA':
-        $controller->consultarCadastrosA();
+        $controller2->consultarCadastrosA();
         break;
-    case '/PROJETO-FINAL-CLINICA/SITE/public/cadastro':
-        $controller->cadastrarAdm();
+    case '/PROJETO-FINAL-CLINICA/SITE/public/cadastroadm':
+        $controller2->cadastrarAdm();
         break;
     case '/PROJETO-FINAL-CLINICA/SITE/public/paciente':
-        $controller->loginfalso();
+        $controller2->loginfalso();
         break;
-    case '/PROJETO-FINAL-CLINICA/SITE/public/deleteCadastro':
+    case '/PROJETO-FINAL-CLINICA/SITE/public/deleteCadastroAdm':
         if ($method == 'POST') {
-            $controller->deleteAdmId();
+            $controller2->deleteAdmId();
         }
         break;
-
-    case (preg_match('/\/PROJETO-FINAL-CLINICA\/SITE\/public\/updateCadastro\/(\d+)/', $request, $matches) ? true : false):
+    case (preg_match('/\/PROJETO-FINAL-CLINICA\/SITE\/public\/updateCadastroAdm\/(\d+)/', $request, $matches) ? true : false):
         $id = $matches[1];
-        $controller->showUpdateForm($id);
+        $controller2->showUpdateForm($id);
         break;
 
-    case '/PROJETO-FINAL-CLINICA/SITE/public/updateCadastro':
+    case '/PROJETO-FINAL-CLINICA/SITE/public/updateCadastroA':
         if ($method == 'POST') {
-            $controller->updateAdm();
-        }
-        break;
-    default:
-        http_response_code(404);
-        echo "Página não encontrada.";
-        break;
-}
-
-require_once '../controllers/controllerMed.php';
-
-// Lógica de roteamento
-$request = $_SERVER['REQUEST_URI'];
-$method = $_SERVER['REQUEST_METHOD']; // Para diferenciar GET e POST
-
-$controller = new controllerMed();
-
-switch ($request) {
-    case '/PROJETO-FINAL-CLINICA/SITE/public/':
-        $controller->inicio();
-        break;
-
-    case '/PROJETO-FINAL-CLINICA/SITE/public/salvarCadastroM':
-        if ($method == 'POST') {
-            $controller->salvarCadastroM();
-        } else {
-            http_response_code(405); // Método não permitido
-            echo "Método não permitido.";
-        }
-        break;
-    case '/PROJETO-FINAL-CLINICA/SITE/public/consultarCadastrosM':
-        $controller->consultarCadastrosM();
-        break;
-    case '/PROJETO-FINAL-CLINICA/SITE/public/cadastro':
-        $controller->cadastrarMed();
-        break;
-    case '/PROJETO-FINAL-CLINICA/SITE/public/medico':
-        $controller->loginfalso();
-        break;
-    case '/PROJETO-FINAL-CLINICA/SITE/public/deleteCadastro':
-        if ($method == 'POST') {
-            $controller->deleteMedId();
+            $controller2->updateAdm();
         }
         break;
 
-    case (preg_match('/\/PROJETO-FINAL-CLINICA\/SITE\/public\/updateCadastro\/(\d+)/', $request, $matches) ? true : false):
-        $id = $matches[1];
-        $controller->showUpdateForm($id);
-        break;
-
-    case '/PROJETO-FINAL-CLINICA/SITE/public/updateCadastro':
-        if ($method == 'POST') {
-            $controller->updateMed();
-        }
-        break;
     default:
         http_response_code(404);
         echo "Página não encontrada.";

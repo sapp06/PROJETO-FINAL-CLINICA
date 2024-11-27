@@ -17,7 +17,7 @@
     <div class="container">
         <div class="cadastro">
             <h1 class="fw-bold">Cadastro</h1>
-            <form action="" method="post">
+            <form action="/PROJETO-FINAL-CLINICA/SITE/public/salvarCadastroP" method="post">
                 <input type="text" name="nome" placeholder="Nome completo">
                 <input type="email" name="email" placeholder="E-mail">
                 <input type="password" name="senha" placeholder="Senha">
@@ -38,11 +38,6 @@
                 <button type="submit" id="concluir">Concluir</button>
             </form>
                 </div>
-            </div>
-            <div id="concluir">
-                <a href="homepage.php">
-                    <p>Concluir</p>
-                </a>
             </div>
         </div>
     </div>

@@ -102,6 +102,8 @@
                         </form>
                         <div>
                                 <a href="/PROJETO-FINAL-CLINICA/SITE/public/administrador"><button class="btn btn-primary" >Login</button></a>
+                                <a href="/PROJETO-FINAL-CLINICA/SITE/public/cadastroadm"><button type="button"
+                                    class="btn btn-link text-success">Cadastro</button></a>
                         </div>
                     </div>
                 </div>

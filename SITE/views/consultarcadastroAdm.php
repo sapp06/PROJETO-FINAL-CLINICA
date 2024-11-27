@@ -52,10 +52,13 @@
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link fs-4 px-4" href="/PROJETO-FINAL-CLINICA/SITE/public/adm">Início</a>
+                        <a class="nav-link fs-4 px-4" href="/PROJETO-FINAL-CLINICA/SITE/public/administrador">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-4 px-4 active" href="javascript:void(0)">Cadastros</a>
+                        <a class="nav-link fs-4 px-4" href="/PROJETO-FINAL-CLINICA/SITE/public/consultarCadastros">Pacientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-4 px-4" href="/PROJETO-FINAL-CLINICA/SITE/public/consultarCadastrosA">Colaboradores</a>
                     </li>
                 </ul>
             </div>
@@ -69,15 +72,15 @@
         <?php if (empty($adms)): ?>
             <p>Nenhum usuário cadastrado.</p>
         <?php else: ?>
-            <table class="table" border="1">
+            <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th>Nome</th>
                         <th>E-mail</th>
-                        <th>Data de nascimento</th>
                         <th>CPF</th>
                         <th>RG</th>
-                        <th>Sexo</th>
+                        <th>Data de Nascimento</th>
+                        <th>Classe</th>
                         <th>Ações</th>
                     </tr>
                 </thead>
@@ -86,13 +89,13 @@
                         <tr>
                             <td><?php echo htmlspecialchars($adm['nome']); ?></td>
                             <td><?php echo htmlspecialchars($adm['email']); ?></td>
-                            <td><?php echo htmlspecialchars($adm['nasc']); ?></td>
                             <td><?php echo htmlspecialchars($adm['cpf']); ?></td>
                             <td><?php echo htmlspecialchars($adm['rg']); ?></td>
-                            <td><?php echo htmlspecialchars($adm['sexo']); ?></td>
+                            <td><?php echo htmlspecialchars($adm['nasc']); ?></td>
+                            <td><?php echo htmlspecialchars($adm['classe']); ?></td>
                             <td>
-                                <a href="/PROJETO-FINAL-CLINICA/SITE/public/updateCadastro/<?php echo $adm['id']; ?>" class="btn btn-atualizar">Atualizar</a>
-                                <form action="/PROJETO-FINAL-CLINICA/SITE/public/deleteCadastro" method="POST" style="display:inline;">
+                                <a href="/PROJETO-FINAL-CLINICA/SITE/public/updateCadastroAdm/<?php echo $adm['id']; ?>" class="btn btn-atualizar">Atualizar</a>
+                                <form action="/PROJETO-FINAL-CLINICA/SITE/public/deleteCadastroAdm" method="POST" style="display:inline;">
                                     <input type="hidden" name="id" value="<?php echo $adm['id']; ?>">
                                     <button type="submit" class="btn btn-excluir">Excluir</button>
                                 </form>

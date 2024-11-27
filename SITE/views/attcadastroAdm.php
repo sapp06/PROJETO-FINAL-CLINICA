@@ -24,14 +24,13 @@
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link fs-4 px-4" href="/PROJETO-FINAL-CLINICA/SITE/public/adm">Início</a>
+                        <a class="nav-link fs-4 px-4" href="/PROJETO-FINAL-CLINICA/SITE/public/administrador">Início</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-4 px-4 active" href="/PROJETO-FINAL-CLINICA/SITE/public/consultarCadastrosA">Cadastros</a>
                     </li>
                 </ul>
             </div>
-
         </div>
     </nav>
 
@@ -80,12 +79,12 @@
                     value="<?php echo htmlspecialchars($admInfo['nasc']); ?>" required>
             </div>
 
+            <!-- Novo campo de Classe -->
             <div class="mb-3">
-                <label for="sexo" class="form-label">Sexo</label>
-                <select name="sexo" id="sexo" class="form-select" required>
-                    <option value="" disabled hidden>Selecione o sexo</option>
-                    <option value="masc" <?php echo ($admInfo['sexo'] === 'masc') ? 'selected' : ''; ?>>Masculino</option>
-                    <option value="fem" <?php echo ($admInfo['sexo'] === 'fem') ? 'selected' : ''; ?>>Feminino</option>
+                <label for="classe" class="form-label">Classe</label>
+                <select name="classe" id="classe" class="form-control" required>
+                    <option value="Administrador" <?php echo ($admInfo['classe'] == 'Administrador' ? 'selected' : ''); ?>>Administrador</option>
+                    <option value="Médico" <?php echo ($admInfo['classe'] == 'Médico' ? 'selected' : ''); ?>>Médico</option>
                 </select>
             </div>
 
@@ -93,6 +92,7 @@
         </form>
     </div>
 </body>
+
 <footer>
     <div class="redes">
         <a href="javascript:void(0)" target="_blank" rel="external"><img
