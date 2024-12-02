@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse" id="mynavbar">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a class="nav-link fs-4 px-4 active" href="javascript:void(0)">Início</a>
+                        <a class="nav-link fs-4 px-4 active fw-bold" href="javascript:void(0)">Início</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-4 px-4" href="/PROJETO-FINAL-CLINICA/SITE/public/consultarCadastros">Pacientes</a>

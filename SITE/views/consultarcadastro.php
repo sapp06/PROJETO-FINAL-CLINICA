@@ -55,7 +55,7 @@
                         <a class="nav-link fs-4 px-4" href="/PROJETO-FINAL-CLINICA/SITE/public/administrador">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fs-4 px-4" href="/PROJETO-FINAL-CLINICA/SITE/public/consultarCadastros">Pacientes</a>
+                        <a class="nav-link fs-4 px-4 fw-bold active" href="/PROJETO-FINAL-CLINICA/SITE/public/consultarCadastros">Pacientes</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fs-4 px-4" href="/PROJETO-FINAL-CLINICA/SITE/public/consultarCadastrosA">Colaboradores</a>
